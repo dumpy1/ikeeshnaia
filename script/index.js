@@ -20,6 +20,7 @@ function openMenu (event) {
 function closeMenu (event) {
     catalog.classList.remove('open');
     overlay.classList.remove('active');
+    closeSubMenu();
 }
 
 function openSubMenu  (event) {
@@ -42,7 +43,7 @@ overlay.addEventListener('click', closeMenu);
 document.addEventListener('keydown', (event) => {
     if (event.code === 'Escape') {
         closeMenu();
-        closeSubMenu();
+        
     }
 })
 
